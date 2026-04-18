@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>حاسبة ويندوز العلمية</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="header">
+        <span>علمي</span>
+        <i class="menu-icon">☰</i>
+      </div>
+
+      <div class="display">
+        <div id="previous-operand"></div>
+        <div id="current-operand">0</div>
+      </div>
+
+      <div class="buttons-grid">
+        <!-- الصف الأول -->
+        <button onclick="appendFunction('2nd')">2nd</button>
+        <button onclick="appendConstant('pi')">π</button>
+        <button onclick="appendConstant('e')">e</button>
+        <button onclick="clearDisplay()" class="clear">C</button>
+        <button onclick="deleteNumber()">⌫</button>
+
+        <!-- الصف الثاني -->
+        <button onclick="appendFunction('square')">x²</button>
+        <button onclick="appendFunction('reciprocal')">1/x</button>
+        <button onclick="appendFunction('abs')">|x|</button>
+        <button onclick="appendOperator('exp')">exp</button>
+        <button onclick="appendOperator('mod')">mod</button>
+
+        <!-- الصف الثالث والأرقام -->
+        <button onclick="appendFunction('sqrt')">²√x</button>
+        <button onclick="appendBracket('(')">(</button>
+        <button onclick="appendBracket(')')">)</button>
+        <button onclick="appendFunction('fact')">n!</button>
+        <button onclick="appendOperator('/')" class="operator">÷</button>
+
+        <button onclick="appendOperator('pow')">xʸ</button>
+        <button onclick="appendNumber('7')" class="number">7</button>
+        <button onclick="appendNumber('8')" class="number">8</button>
+        <button onclick="appendNumber('9')" class="number">9</button>
+        <button onclick="appendOperator('*')" class="operator">×</button>
+
+        <button onclick="appendFunction('10pow')">10ˣ</button>
+        <button onclick="appendNumber('4')" class="number">4</button>
+        <button onclick="appendNumber('5')" class="number">5</button>
+        <button onclick="appendNumber('6')" class="number">6</button>
+        <button onclick="appendOperator('-')" class="operator">−</button>
+
+        <button onclick="appendFunction('log')">log</button>
+        <button onclick="appendNumber('1')" class="number">1</button>
+        <button onclick="appendNumber('2')" class="number">2</button>
+        <button onclick="appendNumber('3')" class="number">3</button>
+        <button onclick="appendOperator('+')" class="operator">+</button>
+
+        <button onclick="appendFunction('ln')">ln</button>
+        <button onclick="appendFunction('negate')">+/-</button>
+        <button onclick="appendNumber('0')" class="number">0</button>
+        <button onclick="appendNumber('.')">.</button>
+        <button onclick="calculate()" class="equals">=</button>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
